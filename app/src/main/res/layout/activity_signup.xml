@@ -1,0 +1,288 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@drawable/background">
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/background">
+
+        <TextView
+            android:id="@+id/signuptitle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/rubiksemibold"
+            android:gravity="center"
+            android:letterSpacing="0.2"
+            android:text="@string/signup"
+            android:textColor="@color/white"
+            android:textSize="32sp"
+            android:layout_marginTop="140sp"
+            android:layout_marginBottom="160sp"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toTopOf="@+id/namereglayout"/>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/namereglayout"
+            android:layout_width="323dp"
+            android:layout_height="60dp"
+            android:hint="@string/name"
+            android:textColorHint="@color/primary"
+            android:layout_marginBottom="20sp"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/signuptitle"
+            app:layout_constraintBottom_toTopOf="@+id/emailreglayout">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/regname"
+                android:layout_width="323dp"
+                android:layout_height="match_parent"
+                android:ems="15"
+                android:inputType="textPersonName"
+                android:autofillHints="name"
+                android:drawableStart="@drawable/ic_person"
+                android:drawablePadding="10sp"
+                android:fontFamily="@font/rubiksemibold"
+                android:textColor="@color/black"/>
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/emailreglayout"
+            android:layout_width="323dp"
+            android:layout_height="60dp"
+            android:hint="@string/email"
+            android:textColorHint="@color/primary"
+            android:layout_marginBottom="20sp"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/namereglayout"
+            app:layout_constraintBottom_toTopOf="@+id/passwordreglayout">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/regemail"
+                android:layout_width="323dp"
+                android:layout_height="match_parent"
+                android:ems="15"
+                android:drawableStart="@drawable/ic_email"
+                android:drawablePadding="10sp"
+                android:inputType="textEmailAddress"
+                android:autofillHints="emailAddress"
+                android:fontFamily="@font/rubiksemibold"
+                android:textColor="@color/black"/>
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/passwordreglayout"
+            android:layout_width="323dp"
+            android:layout_height="60dp"
+            android:hint="@string/password"
+            android:textColorHint="@color/primary"
+            android:layout_marginBottom="20sp"
+            app:passwordToggleEnabled="true"
+            app:passwordToggleTint="@color/primary"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/emailreglayout"
+            app:layout_constraintBottom_toTopOf="@+id/conpasswordreglayout">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/regpass"
+                android:layout_width="323dp"
+                android:layout_height="match_parent"
+                android:ems="15"
+                android:drawableStart="@drawable/ic_lock"
+                android:drawablePadding="10sp"
+                android:inputType="textPassword"
+                android:autofillHints="password"
+                android:fontFamily="@font/rubiksemibold"
+                android:textColor="@color/black"/>
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/conpasswordreglayout"
+            android:layout_width="323dp"
+            android:layout_height="60dp"
+            android:hint="@string/confirm_password"
+            android:textColorHint="@color/primary"
+            android:layout_marginBottom="20sp"
+            app:passwordToggleEnabled="true"
+            app:passwordToggleTint="@color/primary"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/passwordreglayout"
+            app:layout_constraintBottom_toTopOf="@+id/numberreglayout">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/regconpass"
+                android:layout_width="323dp"
+                android:layout_height="match_parent"
+                android:ems="15"
+                android:drawableStart="@drawable/ic_lock"
+                android:drawablePadding="10sp"
+                android:inputType="textPassword"
+                android:autofillHints="password"
+                android:fontFamily="@font/rubiksemibold"
+                android:textColor="@color/black"/>
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/numberreglayout"
+            android:layout_width="323dp"
+            android:layout_height="60dp"
+            android:hint="@string/phonenumber"
+            android:textColorHint="@color/primary"
+            android:layout_marginBottom="20sp"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/conpasswordreglayout"
+            app:layout_constraintBottom_toTopOf="@+id/dobreglayout">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/regphone"
+                android:layout_width="323dp"
+                android:layout_height="match_parent"
+                android:ems="15"
+                android:drawableStart="@drawable/ic_phone"
+                android:drawablePadding="10sp"
+                android:inputType="phone"
+                android:autofillHints="phone"
+                android:fontFamily="@font/rubiksemibold"
+                android:textColor="@color/black"/>
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/dobreglayout"
+            android:layout_width="323dp"
+            android:layout_height="60dp"
+            android:hint="@string/date_of_birth"
+            android:textColorHint="@color/primary"
+            android:layout_marginBottom="20sp"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/numberreglayout"
+            app:layout_constraintBottom_toTopOf="@+id/gender_radio_group">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/regdob"
+                android:layout_width="323dp"
+                android:layout_height="match_parent"
+                android:ems="15"
+                android:inputType="date"
+                android:drawableStart="@drawable/ic_date"
+                android:drawablePadding="10sp"
+                android:fontFamily="@font/rubiksemibold"
+                android:textColor="@color/black"/>
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <TextView
+            android:id="@+id/gender_label"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/gender"
+            android:fontFamily="@font/rubiksemibold"
+            android:textColor="@color/black"
+            android:layout_marginTop="32sp"
+            app:layout_constraintTop_toBottomOf="@+id/dobreglayout"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/gender_radio_group"
+            app:layout_constraintHorizontal_chainStyle="packed"/>
+
+        <RadioGroup
+            android:id="@+id/gender_radio_group"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="20sp"
+            app:layout_constraintTop_toBottomOf="@+id/dobreglayout"
+            app:layout_constraintStart_toEndOf="@+id/gender_label"
+            app:layout_constraintEnd_toEndOf="parent">
+
+            <RadioButton
+                android:id="@+id/regmale"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/male"
+                android:fontFamily="@font/rubiksemibold"
+                android:textColor="@color/black"/>
+
+            <RadioButton
+                android:id="@+id/regfemale"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/female"
+                android:fontFamily="@font/rubiksemibold"
+                android:textColor="@color/black"/>
+
+            <RadioButton
+                android:id="@+id/regother"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/other"
+                android:fontFamily="@font/rubiksemibold"
+                android:textColor="@color/black"/>
+        </RadioGroup>
+
+
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/regbtn"
+            android:layout_width="1.5in"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="16dp"
+            android:background="@drawable/gradient"
+            android:text="@string/signup"
+            android:textColor="@color/white"
+            android:textStyle="bold"
+            android:outlineProvider="paddedBounds"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/gender_radio_group"
+            app:layout_constraintBottom_toTopOf="@+id/haveaccount"
+            tools:ignore="InOrMmUsage" />
+
+        <TextView
+            android:id="@+id/haveaccount"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20sp"
+            android:fontFamily="@font/rubikextrabold"
+            android:text="@string/have_account"
+            android:textColor="@color/black"
+            android:textSize="12sp"
+            android:layout_marginStart="-100sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/regbtn" />
+
+        <TextView
+            android:id="@+id/clickhere"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/rubikextrabold"
+            android:text="@string/click_here_to_login"
+            android:textColor="@color/black"
+            android:textSize="12sp"
+            android:layout_marginStart="115sp"
+            android:layout_marginTop="20sp"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/regbtn"
+            app:layout_constraintBottom_toBottomOf="parent"/>
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</ScrollView>

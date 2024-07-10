@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "444966590786",
+    "firebase_url": "https://duelisto-default-rtdb.firebaseio.com",
+    "project_id": "duelisto",
+    "storage_bucket": "duelisto.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:444966590786:android:f627eb61f11c32229fd0db",
+        "android_client_info": {
+          "package_name": "com.duelisto"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "444966590786-19h4vnts1anlmcbimh0fklog0jcucdnp.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.duelisto",
+            "certificate_hash": "5d27c624632de64968f993f31dae65d6aff54af7"
+          }
+        },
+        {
+          "client_id": "444966590786-ivl7j0kne4vu0nj1aaduqdkh6lnod7gs.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAa8W-hdPoxPlQnIbbDf8vWg_kuH7cGWW4"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "444966590786-ivl7j0kne4vu0nj1aaduqdkh6lnod7gs.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

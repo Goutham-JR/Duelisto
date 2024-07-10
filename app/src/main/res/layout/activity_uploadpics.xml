@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#696969"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/editprofilelayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/layout_bg"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent">
+
+            <com.google.android.material.imageview.ShapeableImageView
+                android:id="@+id/profileimgadv"
+                android:layout_width="150dp"
+                android:layout_height="150dp"
+                android:layout_marginTop="20sp"
+                android:layout_marginBottom="20sp"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintBottom_toTopOf="@+id/profileimgeditbtn"
+                app:shapeAppearanceOverlay="@style/RoundedImage"
+                android:src="@drawable/ic_person" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/profileimgeditbtn"
+                android:layout_width="100sp"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="16dp"
+                android:background="@drawable/invertgradient"
+                android:layout_marginBottom="20sp"
+                android:text="Edit"
+                android:textColor="@color/white"
+                android:textStyle="bold"
+                android:outlineProvider="paddedBounds"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/profileimgadv"
+                app:layout_constraintBottom_toTopOf="@+id/editprofilenameadv"/>
+
+            <TextView
+                android:id="@+id/editprofilenameadv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="NAME"
+                android:textColor="@color/white"
+                android:textSize="24sp"
+                android:fontFamily="@font/rubiksemibold"
+                android:layout_marginBottom="20sp"
+                app:layout_constraintTop_toBottomOf="@+id/profileimgeditbtn"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintBottom_toTopOf="@+id/profilenameeditbtn"
+                 />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/profilenameeditbtn"
+                android:layout_width="100sp"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="16dp"
+                android:background="@drawable/invertgradient"
+                android:text="Edit"
+                android:textColor="@color/white"
+                android:textStyle="bold"
+                android:outlineProvider="paddedBounds"
+                android:layout_marginBottom="20sp"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/editprofilenameadv"
+                app:layout_constraintBottom_toBottomOf="parent"/>
+
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/profilesavebtnadv"
+            android:layout_width="300sp"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="16dp"
+            android:background="@drawable/gradient"
+            android:text="@string/save"
+            android:textColor="@color/white"
+            android:textStyle="bold"
+            android:outlineProvider="paddedBounds"
+            android:layout_marginTop="20sp"
+            android:layout_marginBottom="20sp"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/editprofilelayout"
+            app:layout_constraintBottom_toTopOf="@+id/profilecancelbtnadv"/>
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/profilecancelbtnadv"
+            android:layout_width="300sp"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="16dp"
+            android:background="@drawable/gradient"
+            android:text="Cancel"
+            android:textColor="@color/white"
+            android:textStyle="bold"
+            android:outlineProvider="paddedBounds"
+            android:layout_marginBottom="20sp"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/profilesavebtnadv"
+            app:layout_constraintBottom_toBottomOf="parent"/>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</ScrollView>
