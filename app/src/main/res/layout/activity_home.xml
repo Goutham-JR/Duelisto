@@ -30,8 +30,8 @@
                 android:layout_height="50dp"
                 android:src="@drawable/ic_person"
                 android:layout_marginTop="2dp"
-                app:shapeAppearanceOverlay="@style/RoundedImage" />
-
+                app:shapeAppearanceOverlay="@style/RoundedImage"
+                />
             <SearchView
                 android:id="@+id/searchView"
                 android:layout_width="0dp"

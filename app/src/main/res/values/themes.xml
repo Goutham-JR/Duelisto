@@ -1,7 +1,15 @@
 <resources xmlns:tools="http://schemas.android.com/tools">
     <!-- Base application theme. -->
-    <style name="Base.Theme.Duelisto" parent="Theme.Material3.DayNight.NoActionBar">
-
+    <style name="Base.Theme.Duelisto" parent="Theme.MaterialComponents.DayNight.NoActionBar">
+        <item name="colorPrimary">@color/LightOffPrimary</item>
+        <item name="colorPrimaryVariant">@color/LightPrimaryVariant</item>
+        <item name="colorOnPrimary">@color/LightOnPrimary</item>
+        <item name="colorSecondary">@color/LightOffSecondary</item>
+        <item name="colorOnSecondary">@color/LightOnSecondary</item>
+        <item name="colorOnSurface">@color/LightText</item>
+        <item name="iconTint">@color/LightIconTint</item>
+        <item name="underlineColor">#000000</item>
+        <item name="themeColor">#FFFFFF</item>
     </style>
 
     <style name="Theme.Duelisto" parent="Base.Theme.Duelisto" />

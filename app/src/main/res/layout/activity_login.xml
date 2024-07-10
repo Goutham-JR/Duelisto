@@ -5,7 +5,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/background">
+    android:background="@drawable/background"
+    tools:context=".LoginActivity">
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -79,9 +80,7 @@
                 android:drawablePadding="10sp"
                 android:inputType="textEmailAddress"
                 android:fontFamily="@font/rubiksemibold"
-                android:textColor="@color/black"
-                tools:layout_editor_absoluteX="155dp"
-                tools:layout_editor_absoluteY="810dp" />
+                android:textColor="@color/black"/>
 
         </com.google.android.material.textfield.TextInputLayout>
 

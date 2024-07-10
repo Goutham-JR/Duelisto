@@ -6,5 +6,27 @@
     <color name="secondary">#CADCFC</color>
     <color name="textcolor">#CADCFC</color>
     <color name="link">#0000EE</color>
+    <color name="colorPrimaryDark">#001234</color>
+
+    <!-- LIGHT MODE -->
+    <color name="LightOnPrimary">#0085FF</color>
+    <color name="LightOffPrimary">#0069D9</color>
+    <color name="LightPrimaryVariant">#007BFF</color>
+    <color name="LightOnSecondary">#FFC107</color>
+    <color name="LightOffSecondary">#FFA07A</color>
+    <color name="LightText">#121212</color>
+    <color name="LightIconTint">#121212</color>
+
+    <!-- DARK MODE -->
+    <color name="DarkOnPrimary">#FF8C00</color>
+    <color name="DarkOffPrimary">#FFA07A</color>
+    <color name="DarkPrimaryVariant">#FF9900</color>
+    <color name="DarkOnSecondary">#66D9EF</color>
+    <color name="DarkOffSecondary">#64B6CD</color>
+    <color name="DarkText">#FFFFFF</color>
+    <color name="DarkIconTint">#FFFFFF</color>
+
+    <!-- OTHER COLOR -->
+    <color name="VerifiedColor">#49adf4</color>
 
 </resources>

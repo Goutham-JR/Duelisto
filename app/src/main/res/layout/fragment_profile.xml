@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".ProfileFragment">
+
+<androidx.constraintlayout.widget.ConstraintLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginStart="5sp"
+    android:layout_marginEnd="5sp">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/profileConstrain"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent">
+
+        <ImageView
+            android:id="@+id/profilebanner"
+            android:layout_width="match_parent"
+            android:layout_height="150sp"
+            android:src="@drawable/img"
+            android:scaleType="fitXY"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"/>
+
+        <com.google.android.material.imageview.ShapeableImageView
+            android:id="@+id/profileimg"
+            android:layout_width="125dp"
+            android:layout_height="125dp"
+            android:background="@color/black"
+            android:src="@drawable/ic_person"
+            android:layout_marginBottom="70sp"
+            app:shapeAppearanceOverlay="@style/RoundedImage"
+            app:layout_constraintTop_toBottomOf="@+id/profilebanner"
+            app:layout_constraintBottom_toTopOf="@id/profilebio"
+            app:layout_constraintLeft_toLeftOf="parent"
+            />
+
+    <TextView
+        android:id="@+id/profilename"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10sp"
+        android:layout_marginBottom="30sp"
+        android:layout_marginLeft="10sp"
+        android:fontFamily="@font/rubiksemibold"
+        android:text="GOUTHAM JR"
+        app:layout_constraintBottom_toTopOf="@id/profilebio"
+        app:layout_constraintLeft_toRightOf="@+id/profileimg"
+        app:layout_constraintTop_toBottomOf="@+id/profilebanner" />
+
+        <com.google.android.material.imageview.ShapeableImageView
+            android:id="@+id/verifiedImg"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:src="@drawable/ic_verified"
+            android:layout_marginBottom="30sp"
+            android:layout_marginStart="10sp"
+            app:shapeAppearanceOverlay="@style/RoundedImage"
+            app:layout_constraintTop_toBottomOf="@+id/profilebanner"
+            app:layout_constraintLeft_toRightOf="@+id/profilename"
+            app:layout_constraintBottom_toTopOf="@+id/profilebio"/>
+
+    <TextView
+        android:id="@+id/profilefriends"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="500 friends"
+        android:layout_marginBottom="30sp"
+        android:layout_marginLeft="10sp"
+        app:layout_constraintBottom_toTopOf="@id/profilebio"
+        app:layout_constraintLeft_toRightOf="@+id/profileimg"
+        app:layout_constraintTop_toBottomOf="@+id/profilename"/>
+
+    <Button
+        android:id="@+id/followbtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/rounded_button"
+        android:drawableLeft="@drawable/ic_add"
+        android:drawableTint="@color/white"
+        android:text="Follow"
+        android:textColor="@color/white"
+        android:layout_marginRight="10sp"
+        app:layout_constraintTop_toBottomOf="@id/profilebanner"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/profilebio"/>
+
+        <TextView
+            android:id="@+id/profilebio"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/rubiksemibold"
+            android:layout_marginStart="10sp"
+            android:layout_marginTop="40sp"
+            android:layout_marginEnd="10sp"
+            android:text="Technical Head of CodeXplorer Club @ RV Institute of Technology and Management | Aspiring Software Developer | Code Enthusiast 🚀 | Ready to Build the Future of IT"
+            app:layout_constraintTop_toBottomOf="@id/profilename"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/profilebottomconstrain"
+        app:layout_constraintTop_toBottomOf="@+id/profileConstrain"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent">
+
+
+        <com.google.android.material.bottomnavigation.BottomNavigationView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:labelVisibilityMode="labeled"
+            android:background="?attr/themeColor"
+            app:menu="@menu/profile_menu"
+            app:itemBackground="@drawable/nav_item_background"/>
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+</ScrollView>

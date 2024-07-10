@@ -4,7 +4,8 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:background="@color/secondary">
+    android:background="@color/secondary"
+    tools:context=".ProfileSettingActivity">
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
@@ -14,7 +15,7 @@
             android:id="@+id/profilelayout"
             android:layout_width="match_parent"
             android:layout_height="250dp"
-            android:background="@drawable/layout_bg"
+            android:background="@drawable/img"
             android:elevation="40sp"
             app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintLeft_toLeftOf="parent"
@@ -22,19 +23,19 @@
             app:layout_constraintBottom_toTopOf="@+id/emailprofilelayout">
 
             <com.google.android.material.imageview.ShapeableImageView
-                android:id="@+id/profileimg"
+                android:id="@+id/settingprofileimg"
                 android:layout_width="150dp"
                 android:layout_height="150dp"
                 android:layout_marginTop="16dp"
                 app:layout_constraintTop_toTopOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintBottom_toTopOf="@+id/profilename"
+                app:layout_constraintBottom_toTopOf="@+id/settingprofilename"
                 app:shapeAppearanceOverlay="@style/RoundedImage"
                 android:src="@drawable/ic_person" />
 
             <TextView
-                android:id="@+id/profilename"
+                android:id="@+id/settingprofilename"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
@@ -42,7 +43,7 @@
                 android:textColor="@color/white"
                 android:textSize="24sp"
                 android:fontFamily="@font/rubiksemibold"
-                app:layout_constraintTop_toBottomOf="@+id/profileimg"
+                app:layout_constraintTop_toBottomOf="@+id/settingprofileimg"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintBottom_toBottomOf="@+id/profilelayout"
@@ -203,7 +204,7 @@
                 android:layout_height="wrap_content"
                 android:text="@string/male"
                 android:fontFamily="@font/rubiksemibold"
-                android:textColor="@color/black"/>
+                />
 
             <RadioButton
                 android:id="@+id/profilefemale"

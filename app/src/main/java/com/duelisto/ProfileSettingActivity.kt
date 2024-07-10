@@ -51,14 +51,14 @@ class ProfileSettingActivity : AppCompatActivity() {
                         val password = document.getString("password").orEmpty()
                         val imgUrl = document.getString("imageUrl") ?: "https://www.kindpng.com/picc/m/24-248253_user-profile-default-image-png-clipart-png-download.png"
 
-                        binding.profilename.text = name
+                        binding.settingprofilename.text = name
                         binding.profileemail.text = Editable.Factory.getInstance().newEditable(email)
                         binding.profilepass.text = Editable.Factory.getInstance().newEditable(password)
                         binding.profilephone.text = Editable.Factory.getInstance().newEditable(phoneNumber)
                         binding.profiledob.text = Editable.Factory.getInstance().newEditable(dob)
                         Picasso.get()
                             .load(imgUrl)
-                            .into(binding.profileimg)
+                            .into(binding.settingprofileimg)
 
                         when (gender) {
                             "Male" -> binding.profilemale.isChecked = true

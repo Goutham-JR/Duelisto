@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/nav_post"
+        android:icon="@drawable/ic_person"
+        android:title="Post"/>
+    <item
+        android:id="@+id/nav_friends"
+        android:icon="@drawable/ic_person"
+        android:title="Friends"/>
+
+    <item
+        android:id="@+id/tagged"
+        android:icon="@drawable/ic_person"
+        android:title="Tagged"
+        />
+
+</menu>

@@ -1,0 +1,4 @@
+<resources>
+    <attr name="underlineColor" format="color"/>
+    <attr name="themeColor" format="color"/>
+</resources>
