@@ -40,8 +40,20 @@ class LoginActivity : AppCompatActivity() {
             .requestIdToken(getString(R.string.default_web_client_id))
             .requestEmail()
             .build()
-
         googlesignin = GoogleSignIn.getClient(this, gso)
+
+        //Forgot password
+        binding.forgotpassword.setOnClickListener{
+            if(binding.loginemail.text.isNullOrEmpty())
+            {
+                Toast.makeText(this, "Enter the email address", Toast.LENGTH_SHORT).show()
+            }
+            else
+            {
+                auth.sendPasswordResetEmail(binding.loginemail.text.toString())
+                Toast.makeText(this, "Check you're mail for password reset", Toast.LENGTH_LONG).show()
+            }
+        }
 
 
         val checkUser = auth.currentUser?.uid

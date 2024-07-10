@@ -3,7 +3,6 @@ package com.duelisto
 import android.content.Intent
 import android.net.Uri
 import android.os.Bundle
-import android.text.Editable
 import android.widget.Toast
 import androidx.activity.result.ActivityResultCallback
 import androidx.activity.result.contract.ActivityResultContracts
@@ -57,7 +56,7 @@ class UploadProfileImageActivity : AppCompatActivity(){
         }
 
         binding.profilecancelbtnadv.setOnClickListener {
-            startActivity(Intent(this, ProfileActivity::class.java))
+            startActivity(Intent(this, ProfileSettingActivity::class.java))
         }
 
         binding.profilesavebtnadv.setOnClickListener {

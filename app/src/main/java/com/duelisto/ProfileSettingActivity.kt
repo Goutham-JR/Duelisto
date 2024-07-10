@@ -5,20 +5,19 @@ import android.os.Bundle
 import android.text.Editable
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
-import androidx.core.net.toUri
-import com.duelisto.databinding.ActivityProfileBinding
+import com.duelisto.databinding.ActivityProfilesettingBinding
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.firestore.FirebaseFirestore
 import com.squareup.picasso.Picasso
 
-class ProfileActivity : AppCompatActivity() {
+class ProfileSettingActivity : AppCompatActivity() {
     private lateinit var auth: FirebaseAuth
     private lateinit var database: FirebaseFirestore
-    private lateinit var binding: ActivityProfileBinding
+    private lateinit var binding: ActivityProfilesettingBinding
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        binding = ActivityProfileBinding.inflate(layoutInflater)
+        binding = ActivityProfilesettingBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
         auth = FirebaseAuth.getInstance()
@@ -30,6 +29,9 @@ class ProfileActivity : AppCompatActivity() {
             startActivity(Intent(this, UploadProfileImageActivity::class.java))
         }
 
+        binding.profilesavebtn.setOnClickListener {
+            saveInfo()
+        }
 
         binding.profilebackbtn.setOnClickListener {
             startActivity(Intent(this, HomeActivity::class.java))
@@ -76,4 +78,46 @@ class ProfileActivity : AppCompatActivity() {
             Toast.makeText(this, "User is not available", Toast.LENGTH_LONG).show()
         }
     }
+
+    //Update the modified values
+    private fun saveInfo() {
+        val auth = FirebaseAuth.getInstance()
+        val database = FirebaseFirestore.getInstance()
+
+        val userId = auth.currentUser?.uid
+
+        if (userId != null) {
+            val selectedGenderId = binding.profilegenderRadioGroup.checkedRadioButtonId
+            val gender = when (selectedGenderId) {
+                R.id.profilemale -> "Male"
+                R.id.profilefemale -> "Female"
+                R.id.profileother -> "Other"
+                else -> null
+            }
+
+            if (gender == null) {
+                Toast.makeText(this, "Please select a gender", Toast.LENGTH_SHORT).show()
+                return
+            }
+
+            val updates = mutableMapOf<String, Any>()
+
+            updates["password"] = binding.profilepass.text.toString()
+            updates["phonenumber"] = binding.profilephone.text.toString()
+            updates["dob"] = binding.profiledob.text.toString()
+            updates["gender"] = gender
+
+            database.collection("users").document(userId)
+                .update(updates)
+                .addOnSuccessListener {
+                    Toast.makeText(this, "Profile updated successfully", Toast.LENGTH_SHORT).show()
+                }
+                .addOnFailureListener { e ->
+                    Toast.makeText(this, "Failed to update profile: ${e.message}", Toast.LENGTH_LONG).show()
+                }
+        } else {
+            Toast.makeText(this, "User is not logged in", Toast.LENGTH_SHORT).show()
+        }
+    }
+
 }

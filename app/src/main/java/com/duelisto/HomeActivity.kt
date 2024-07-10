@@ -81,7 +81,7 @@ class HomeActivity : AppCompatActivity() {
             }
         slideMenuView.findViewById<Button>(R.id.profilebutton).setOnClickListener{
             dismissSlideMenuWithAnimation{
-                startActivity(Intent(this, ProfileActivity::class.java))
+                startActivity(Intent(this, ProfileSettingActivity::class.java))
             }
         }
 
